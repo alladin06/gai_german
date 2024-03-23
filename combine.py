@@ -7,7 +7,7 @@ from app import nearby_hospi
 from visualize_data import  track_progress_main
 from acne import main_acne
 from sayantan import sos_main
-from login import main_l
+# from login import main_l
 
 def main():
 
@@ -31,7 +31,7 @@ def main():
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
     st.sidebar.title("Geriatrische KI")
-    menu = ["Anmelden", "Gesundheitsdatenaufzeichner", "Fortschritt verfolgen", "In der Nähe befindliche Krankenhäuser finden",  "SOS Alarm", "Notizen","Akneerkennung"]
+    menu = [ "Gesundheitsdatenaufzeichner", "Fortschritt verfolgen", "In der Nähe befindliche Krankenhäuser finden",  "SOS Alarm", "Notizen","Akneerkennung"]
     with st.sidebar:
         app_selection = option_menu(
         menu_title = None,
@@ -43,8 +43,8 @@ def main():
     if app_selection == "Medikamentenerinnerung":
         # main()
         pass
-    elif app_selection=="Anmelden":
-        main_l()
+    # elif app_selection=="Anmelden":
+    #     main_l()
         
     elif app_selection == "Notizen":
         notes_main()
