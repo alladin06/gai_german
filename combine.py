@@ -31,7 +31,7 @@ def main():
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
     st.sidebar.title("Geriatrische KI")
-    menu = [ "Gesundheitsdatenaufzeichner", "Fortschritt verfolgen", "In der Nähe befindliche Krankenhäuser finden",  "SOS Alarm", "Notizen","Akneerkennung"]
+    menu = [ "Gesundheitsdatenaufzeichner", "Fortschritt verfolgen", "In der Nähe befindliche Krankenhäuser finden",  "SOS Alarm", "Notizen","Akneerkennung","Veranstaltungen in meiner Nähe"]
     with st.sidebar:
         app_selection = option_menu(
         menu_title = None,
@@ -62,6 +62,33 @@ def main():
         main_data()
     elif app_selection=="Akneerkennung":
         main_acne()
+    elif app_selection == "Veranstaltungen in meiner Nähe":st.markdown("""
+    **Online-Veranstaltung**: Digivartti: Thema ist Google Kalender  
+    **Wann:** Fr, 20.9.2024 von 10 bis 10.30 Uhr  
+    **Wo:** Online via Zoom  
+    [Mehr Informationen](https://www.entersenior.fi/tapahtumat/digivartti-0924/)
+
+    **Lokale Veranstaltung**: Lösungen für ein gutes Alltagsleben  
+    **Wann:** Mi-Do, 2-3.10.2024  
+    **Wo:** Messezentrum Helsinki, Messuaukio 1, 00520 Helsinki  
+    [Mehr Informationen](https://hyvaika.expomark.fi/)
+
+    **Reise:** Nordportugal, Porto und Portweingüter  
+    **Wann:** Mo-Sa, 21-26.10.2024  
+    **Wo:** Porto, Portugal  
+    [Mehr Informationen](https://kilta.senioriliitto.fi/Tapahtumat/tapahtumatiedot.aspx?id=28261)
+
+    **Hybrid-Veranstaltung:** Erkenne einen Online-Betrug  
+    **Wann:** Mi, 23.10.2024 von 13:30 bis 15:00 Uhr  
+    **Wo:** Online via Zoom, Veranstaltung im Kampi  
+    [Mehr Informationen](https://www.entersenior.fi/tapahtumat/tunnista-nettihuijaus/)
+
+    **Lokale Veranstaltung:** Geführtes Training im Fitnessstudio  
+    **Wann:** Mo, 30.12.2024 von 10:00 bis 11:00 Uhr  
+    **Wo:** Seniorenzentrum Myllypuro/Dienstleistungszentrum, Myllymatkantie 4, Helsinki  
+    [Mehr Informationen](https://tapahtumat.hel.fi/fi/events/helsinki:agh3rorroe)
+    """)
+
 
 if __name__ == "__main__":
     main()
